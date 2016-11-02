@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.19
+FROM inkton/nest.core
 
 MAINTAINER nest.yt
 
@@ -13,6 +13,7 @@ RUN curl -o /tmp/packagescache.tar.gz https://dist.asp.net/packagecache/aspnetco
     tar xvf /tmp/packagescache.tar.gz && \
     rm /tmp/packagescache.tar.gz && \
     apt-get update -y && apt-get install -y sudo git jq && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     chmod +x /etc/my_init.d/start-app.sh
 
 # set env var for packages cache
