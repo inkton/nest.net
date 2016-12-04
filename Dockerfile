@@ -14,6 +14,11 @@ RUN curl -o /tmp/packagescache.tar.gz https://dist.asp.net/packagecache/aspnetco
     rm /tmp/packagescache.tar.gz && \
     apt-get update -y && apt-get install -y sudo git jq && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    mkdir /usr/local/tree && \
+    git clone https://github.com/inkton/nest.git /usr/local/tree/nest && \
+    git clone https://github.com/inkton/nester.git /usr/local/tree/nester && \
+    pip install --upgrade pip virtualenv daemonize && \
+    cd /usr/local/tree/nester && make install && \    
     chmod +x /etc/my_init.d/start-app.sh
 
 # set env var for packages cache
