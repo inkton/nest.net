@@ -14,9 +14,6 @@ RUN  apt-get update -y && apt-get install -y sudo git jq && \
     git clone https://github.com/inkton/nest.git /usr/local/tree/nest && \
     chmod +x /etc/my_init.d/start-app.sh
 
-# set env var for packages cache
-ENV DOTNET_HOSTING_OPTIMIZATION_CACHE /var/packagescache
-
 WORKDIR "/var/app"
 
 EXPOSE 5000
