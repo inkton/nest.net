@@ -1,4 +1,4 @@
-FROM microsoft/dotnet
+FROM microsoft/aspnetcore-build
 MAINTAINER nest.yt
 
 ADD start-app.sh /etc/
