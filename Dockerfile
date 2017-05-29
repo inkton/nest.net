@@ -1,4 +1,5 @@
-FROM microsoft/aspnetcore-build
+FROM microsoft/1.1.2-runtime-deps-jessie
+
 MAINTAINER nest.yt
 
 ADD start-app.sh /etc/
