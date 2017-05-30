@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:1.1.2-runtime-deps-jessie
+FROM microsoft/dotnet:1.1.2-runtime
 
 MAINTAINER nest.yt
 
